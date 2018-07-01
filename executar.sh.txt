@@ -1,0 +1,2 @@
+sudo docker build -t avaliacao_josue_willian .
+sudo docker run avaliacao05_josue_willian
