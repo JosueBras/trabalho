@@ -1,8 +1,14 @@
-FROM phyton
+FROM phyton:3
+
 RUN useradd sistemas
-WORKDIR " /home/sistemas/"
-COPY ["bomdia.py","."]
-USER sistemas
+
+COPY /home/josue/bomdia.py /home/sistemas
+
 ENV NOME="josue_willian"
+
+WORKDIR " /home/sistemas/"
+
+USER sistemas
+
 ENTRYPOINT ["phyton"]
 CMD ["bomdia.py"]
